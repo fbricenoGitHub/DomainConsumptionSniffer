@@ -139,10 +139,13 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CommandLineArgumentValidator.cpp" />
     <ClCompile Include="DomainConsumptionSniffer.cpp" />
     <ClCompile Include="DomainHttpAccessCounter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CommandLineArgumentValidator.h" />
+    <ClInclude Include="CommonHeaders.h" />
     <ClInclude Include="DomainHttpAccessCounter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,14 +1,6 @@
 #pragma once
 
-#include <iostream>
-#include <string>
-#include <unordered_map>
-#include <regex>
-#include <limits>
-#include <iomanip>
-
-
-using namespace std;
+#include "CommonHeaders.h"
 
 class DomainHttpAccessCounter
 {
