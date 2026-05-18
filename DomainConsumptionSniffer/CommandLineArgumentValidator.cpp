@@ -175,6 +175,13 @@ bool CommandLineArgumentValidator::getArgumentValues() {
 	return true;
 }
 
+void CommandLineArgumentValidator::printParsedArguments() const {
+	cout << "Parsed Arguments:" << endl;
+	cout << "IP Address: " << this->ipAddressArgument << endl;
+	cout << "Log File: " << this->logFileArgument << endl;
+	cout << "Monitor Time: " << this->monitorTimeArgument << " seconds" << endl;
+}
+
 bool CommandLineArgumentValidator::validateArgumentCount() const {
 	// ensure required arguments were provided (ip, log file, time)
 	return !this->ipAddressArgument.empty() &&

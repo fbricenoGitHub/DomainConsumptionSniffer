@@ -22,6 +22,7 @@ public:
 	unsigned int getMonitorTimeArgument() const;
 
 	bool getArgumentValues();
+	void printParsedArguments() const;
 
 private:
 	void printUsage() const;	

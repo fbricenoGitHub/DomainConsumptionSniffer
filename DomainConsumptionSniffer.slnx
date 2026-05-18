@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="DomainConsumptionSniffer/DomainConsumptionSniffer.vcxproj" />
+  <Project Path="DomainConsumptionSniffer/DomainConsumptionSniffer.vcxproj" Id="7e169f51-7546-45dd-8233-d455375297c0" />
 </Solution>
