@@ -2,6 +2,7 @@
 
 #include "CommonHeaders.h"
 
+
 const int TOP_DOMAINS_TO_PRINT = 10;
 
 enum sendResultsTo {
@@ -32,7 +33,6 @@ class DomainHttpAccessCounter
 		bool isValidHttpDomain(const string& domain) const;
 		bool isDomainPresent(const string& domain) const;
 		bool insertDomain(const string& domain);
-		bool isDomainCountIncrementSafe(const string& domain);
 		vector<pair<string, int>> getOrderedDomainAccessCount() const;
 		void printDomainConsumptionHistogram(ostream& os) const;
 		ofstream createLogFile() const;

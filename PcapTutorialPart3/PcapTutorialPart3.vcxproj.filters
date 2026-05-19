@@ -15,13 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DomainConsumptionSniffer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DomainHttpAccessCounter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CommandLineArgumentValidator.cpp">
+    <ClCompile Include="PcapTutorialPart3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PacketStats.cpp">
@@ -29,12 +23,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DomainHttpAccessCounter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CommandLineArgumentValidator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CommonHeaders.h">
       <Filter>Header Files</Filter>
     </ClInclude>

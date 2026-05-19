@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="DomainConsumptionSniffer/DomainConsumptionSniffer.vcxproj" Id="7e169f51-7546-45dd-8233-d455375297c0" />
+  <Project Path="PcapTutorialPart3/PcapTutorialPart3.vcxproj" Id="dab4decd-9c28-4873-9a43-9c0545b07be7" />
 </Solution>

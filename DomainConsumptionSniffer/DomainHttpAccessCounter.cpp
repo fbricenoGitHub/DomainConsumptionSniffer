@@ -15,11 +15,6 @@ bool DomainHttpAccessCounter::incrementDomainCount(const string& domain){
 		return false;
 	}
 
-	if (!isDomainCountIncrementSafe(domain)) {
-		cerr << "Increment domain counter would overflow : " << domain << endl;
-		return false;
-	}
-
 	if (!isDomainPresent(domain)) {
 		insertDomain(domain); 
 	}
@@ -88,16 +83,6 @@ bool DomainHttpAccessCounter::insertDomain(const string& domain) {
 	return true;
 }
 
-bool DomainHttpAccessCounter::isDomainCountIncrementSafe(const string& domain) {
-
-	unsigned int count = this->domainAccessCount[domain];
-	if (count != std::numeric_limits<unsigned int>::max()) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
 
 
 vector<pair<string, int>> DomainHttpAccessCounter::getOrderedDomainAccessCount() const {
