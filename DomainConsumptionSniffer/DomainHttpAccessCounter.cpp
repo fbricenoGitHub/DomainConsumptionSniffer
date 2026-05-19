@@ -52,11 +52,17 @@ void DomainHttpAccessCounter::printDomainConsumptionHistogram(sendResultsTo targ
 }
 
 void DomainHttpAccessCounter::printDomainConsumptionHistogram(ostream& os) const {
-	vector<pair<string, int>> orderedDomainAccessCount = getOrderedDomainAccessCount();
 
-	for (int i = 0; i < min(TOP_DOMAINS_TO_PRINT, static_cast<int>(orderedDomainAccessCount.size())); ++i) {
-		const auto& pair = orderedDomainAccessCount[i];
-		os << std::left << std::setw(50) << pair.first << std::setw(60) << string(pair.second, '*') << endl;
+	if (!this->domainAccessCount.empty()) {
+		vector<pair<string, int>> orderedDomainAccessCount = getOrderedDomainAccessCount();
+
+		for (int i = 0; i < min(TOP_DOMAINS_TO_PRINT, static_cast<int>(orderedDomainAccessCount.size())); ++i) {
+			const auto& pair = orderedDomainAccessCount[i];
+			os << std::left << std::setw(50) << pair.first << std::setw(60) << string(pair.second, '*') << endl;
+		}
+	}
+	else {
+		os << "No domain access data to display." << endl;
 	}
 }
 

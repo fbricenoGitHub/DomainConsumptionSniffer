@@ -95,13 +95,16 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;WPCAP;HAVE_REMOTE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>E:\Usuarios\Fernando\Clientes\LUMU\prueba\libs\WpdPack\Include;E:\Usuarios\Fernando\Clientes\LUMU\prueba\libs\pcapplusplus-25.05-windows-vs2022-win32-release\pcapplusplus-25.05-windows-vs2022-win32-release\include\pcapplusplus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>E:\Usuarios\Fernando\Clientes\LUMU\prueba\libs\WpdPack\Lib;E:\Usuarios\Fernando\Clientes\LUMU\prueba\libs\pcapplusplus-25.05-windows-vs2022-win32-release\pcapplusplus-25.05-windows-vs2022-win32-release\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Packet.lib;wpcap.lib;Common++.lib;Packet++.lib;Pcap++.lib;ws2_32.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>

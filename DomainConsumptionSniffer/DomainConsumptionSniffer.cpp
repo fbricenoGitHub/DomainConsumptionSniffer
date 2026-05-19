@@ -96,15 +96,16 @@ static void onPacketArrives(pcpp::RawPacket* packet, pcpp::PcapLiveDevice* dev, 
 	// parsed the raw packet
 	pcpp::Packet parsedPacket(packet);
 
-	auto* httpRequestLayer = parsedPacket.getLayerOfType<pcpp::HttpRequestLayer>();
-	if (httpRequestLayer == nullptr)
-	{
-		cerr << "Something went wrong, couldn't find HTTP request layer" << endl;
-		return;
+	if (parsedPacket.isPacketOfType(pcpp::HTTP)) {
+		auto* httpRequestLayer = parsedPacket.getLayerOfType<pcpp::HttpRequestLayer>();
+		if (httpRequestLayer == nullptr)
+		{
+			cerr << "Something went wrong, couldn't find HTTP request layer" << endl;
+			return;
+		}
+
+		accessCounter->incrementDomainCount(httpRequestLayer->getFieldByName(PCPP_HTTP_HOST_FIELD)->getFieldValue());
 	}
-
-	accessCounter->incrementDomainCount(httpRequestLayer->getFieldByName(PCPP_HTTP_HOST_FIELD)->getFieldValue());
-
 
 	// collect stats from packet
 	stats->consumePacket(parsedPacket);
